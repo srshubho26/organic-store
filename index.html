@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main': '#8bc34a',
+                        'secondary': 'rgb(17, 17, 17)',
+                        'body': '#f5f1ec',
+                        'accent': 'rgb(106, 151, 57)',
+                        'body_neutral': 'rgb(51, 51, 51)',
+                    },
+                    fontFamily: {
+                        Poppins: ["Poppins", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        leaf1: "linear-gradient(#f3f0eacc, #f3f0eacc), url('./images/leaf01.png')",
+                        call_to_action: "url('./images/call.jpg')",
+                        testimonials: "url('./images/testimonials.jpg')",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-Poppins">
+    <header class="">
+        <nav class="navbar xl:w-11/12 mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                <div tabindex="0" role="button" class="lg:hidden">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Everything</a></li>
+                    <li><a href="#">Groceries</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+                <a href="#">
+                    <img class="h-[70px]" src="images/logo.svg">
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal gap-4 px-1">
+                    <li><a class="text-base lg:text-lg font-medium text-stone-800" href="#">Home</a></li>
+                    <li><a class="text-base lg:text-lg font-medium text-stone-800" href="#">Everything</a></li>
+                    <li><a class="text-base lg:text-lg font-medium text-stone-800" href="#">Groceries</a></li>
+                    <li><a class="text-base lg:text-lg font-medium text-stone-800" href="#">About</a></li>
+                    <li><a class="text-base lg:text-lg font-medium text-stone-800" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end gap-5">
+                <button class="text-accent text-lg font-bold">
+                    <span>$10.00</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <button class="text-lg text-stone-800">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Banner section -->
+        <section class=" bg-leaf1 bg-no-repeat bg-right-bottom bg-contain py-12">
+            <div class="max-w-[450px] md:max-w-screen-xl mx-auto md:flex items-center">
+                <div class="basis-1/2">
+                    <img src="images/bannerbg.png">
+                </div>
+
+                <div class="text-center md:text-left basis-1/2 md:pl-4 xl:pl-10">
+                    <h5 class="text-stone-700 text-xl mb-5 font-semibold">Best Quality Products</h5>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5">Join The Organic Movement!</h1>
+                    <p class="lg:w-3/4 text-neutral-500 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <a href="#" class="rounded-md bg-accent hover:bg-main px-10 font-semibold text-white flex gap-3 w-fit items-center text-lg py-4 mx-auto md:m-0 transition">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Shop Now</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="bg-stone-900 py-20 px-2">
+            <div class="mx-auto max-w-screen-2xl grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+                <div class="bg-body_neutral flex px-5 md:px-10 py-10 items-center gap-5 rounded-md">
+                    <div>
+                        <i class="fa-solid fa-truck text-4xl text-main"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-white capitalize font-semibold">free shipping</h3>
+                        <h5 class="text-base text-white">Above $5 Only</h5>
+                    </div>
+                </div>
+
+                <div class="bg-body_neutral flex px-5 md:px-10 py-10 items-center gap-5 rounded-md">
+                    <div>
+                        <i class="fa-solid fa-certificate text-4xl text-main"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-white capitalize font-semibold">Certified Organic</h3>
+                        <h5 class="text-base text-white">100% Organic</h5>
+                    </div>
+                </div>
+
+                <div class="bg-body_neutral flex px-5 md:px-10 py-10 items-center gap-5 rounded-md">
+                    <div>
+                        <i class="fa-solid fa-piggy-bank text-4xl text-main"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-white capitalize font-semibold">Huge Savings</h3>
+                        <h5 class="text-base text-white">At Lowest Price</h5>
+                    </div>
+                </div>
+
+                <div class="bg-body_neutral flex px-5 md:px-10 py-10 items-center gap-5 rounded-md">
+                    <div>
+                        <i class="fa-solid fa-recycle text-4xl text-main"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-white capitalize font-semibold">Easy Returns</h3>
+                        <h5 class="text-base text-white">No Questions Asked</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:flex flex-row-reverse lg:h-lvh">
+            <div class="basis-1/2">
+                <img class="sm:max-w-[550px] mx-auto lg:max-w-full lg:h-full w-full object-cover" src="images/about.jpg">
+            </div>
+
+            <div class="p-4 text-center lg:text-left basis-1/2 lg:flex flex-col justify-center">
+                <div class="mx-auto xl:pr-10 min-[1800px]:w-3/4">
+                    <h5 class="text-xl font-semibold capitalize text-stone-600">about us</h5>
+
+                    <h2 class="text-xl sm:text-3xl xl:text-6xl font-semibold text-stone-700 capitalize my-5">tell website visitors who you are and why they should choose your business</h2>
+
+                    <p class="text-base xl:text-lg lg:text-justify xl:leading-8 text-stone-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias earum, tenetur quam repellendus architecto sequi consequatur deserunt illum? Repellat, consequatur quae. Ut, quas distinctio expedita perspiciatis molestias voluptas nam optio unde sunt dolor, quo dicta reiciendis! Alias nostrum tempore blanditiis earum eum autem sapiente voluptatum. Optio sunt perferendis maiores natus!</p>
+
+                    <a href="#" class="rounded-md bg-accent hover:bg-main px-5 sm:px-10 font-semibold text-white text-base sm:text-lg py-2 sm:py-4 inline-block mt-5 transition">
+                        <span>Find Out More</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-call_to_action bg-center bg-cover bg-no-repeat text-center py-20 md:py-36 relative">
+            <div class="bg-[#1111114d] absolute left-0 top-0 w-full h-full"></div>
+
+            <div class="relative z-10">
+                <h2 class="mb-5 text-3xl md:text-5xl font-semibold text-white">Insert A call to action</h2>
+                <p class="mx-auto text-xl font-medium mb-5 text-white max-w-md">think of what you want your visitors to do next maybe they should contact you?</p>
+                <button class="btn bg-transparent text-white font-semibold hover:bg-accent">Get In Touch</button>
+            </div>
+        </section>
+
+        <section class="text-center py-20 bg-body px-2">
+            <h2 class="text-4xl font-semibold mb-16">Best Selling Products</h2>
+
+            <div class="max-w-sm sm:max-w-screen-md lg:max-w-screen-xl mx-auto grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product01.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product02.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product03.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product04.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product05.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product06.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product07.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure>
+                      <img class="rounded-md" src="images/product08.jpg"/>
+                    </figure>
+                    <div class="card-body items-center text-center p-0 mt-5">
+                        <h4 class="text-slate-400 font-medium text-lg">Groceries</h4>
+                      <h2 class="card-title">Assorted Coffee</h2>
+                      <div class="rating rating-md gap-2">
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                        <input type="radio" disabled class="mask mask-star-2 bg-yellow-400" />
+                      </div>
+                      <p>$35.00</p>
+
+                      <div class="card-actions">
+                        <a href="#" class="rounded-md bg-accent hover:bg-main px-6 font-semibold text-white flex gap-3 w-fit items-center text-base py-2 mx-auto md:m-0 transition">
+                            <span>Buy Now</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-screen-xl mx-auto py-24 text-center sm:flex px-2 justify-between lg:justify-center items-center">
+            <div class="basis-[210px]">
+                <h3 class="text-2xl font-semibold">Featured Brands:</h3>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                <img class="mx-auto" src="images/logo-1.svg">
+                <img class="mx-auto" src="images/logo-2.svg">
+                <img class="mx-auto" src="images/logo-3.svg">
+                <img class="mx-auto" src="images/logo-4.svg">
+                <img class="mx-auto" src="images/logo-5.svg">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-24 px-2">
+        <div class="footer max-w-screen-xl mx-auto justify-center lg:justify-around sm:gap-20">
+            <aside class="sm:col-span-4 md:col-span-1 text-center">
+                <img src="images/logo-white.png">
+                <p>Providing Organic Food since 1992</p>
+              </aside>
+              <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+              </nav>
+              <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+              </nav>
+              <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+              </nav>
+        </div>
+      </footer>
+</body>
+</html>
